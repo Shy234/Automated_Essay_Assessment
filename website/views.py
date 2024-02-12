@@ -21,7 +21,6 @@ import nltk
 
 views = Blueprint('views', __name__)
 
-nltk.download()
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('corpus')
