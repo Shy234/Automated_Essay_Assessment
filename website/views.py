@@ -10,6 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.linear_model import LinearRegression
 import docx2txt 
 from docx import Document
+import nltk
 from nltk import pos_tag
 from nltk.tokenize import word_tokenize ,sent_tokenize
 from nltk.corpus import stopwords
