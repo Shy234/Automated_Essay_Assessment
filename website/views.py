@@ -21,7 +21,10 @@ from fpdf import FPDF
 views = Blueprint('views', __name__)
 
 import nltk
+
 nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('corpus')
 nltk.download('averaged_perceptron_tagger')
 
 nlp = spacy.load("en_core_web_sm")
