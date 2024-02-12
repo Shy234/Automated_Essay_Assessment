@@ -21,7 +21,7 @@ from fpdf import FPDF
 views = Blueprint('views', __name__)
 
 import nltk
-
+nltk.download()
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('corpus')
