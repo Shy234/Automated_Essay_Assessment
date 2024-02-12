@@ -307,7 +307,7 @@ def create_folder():
             db.session.add(new_folder)
             db.session.commit()
             flash('Folder created successfully!', 'success')
-
+        
         return redirect(url_for('views.home'))
 
 @views.route('/upload_file/<int:folder_id>', methods=['POST'])
@@ -369,6 +369,8 @@ def assess():
 
         if essay_file:
             uploaded_file_name = essay_file.filename
+            flash(' uploaded_file_name = essay_file.filename')
+              
 
         try:
             if essay_file:
@@ -377,16 +379,17 @@ def assess():
                 return render_template("home.html", folders=user_folders, results=assessment_results, user=current_user,
                                        question=question, student_number=student_number,
                                        uploaded_file_name=uploaded_file_name, system_score=assessment_results["Overall Average"])
-
+                flash('try')
             else:
                 assessment_results = {}
                 return render_template("home.html", folders=user_folders, results=assessment_results, user=current_user,
                                        question=question, student_number=student_number,
                                        uploaded_file_name=uploaded_file_name)
+                flash('else two')
 
         except Exception as e:
             print(f"Error in assess_essay: {str(e)}")
-            flash('Error occurred during assessment.', 'error')
+            flash('Error occurred during assessmentss.', 'error')
             return redirect(url_for('views.home', folders=user_folders, user=current_user,
                                     question=question, student_number=student_number,
                                     uploaded_file_name=uploaded_file_name))
