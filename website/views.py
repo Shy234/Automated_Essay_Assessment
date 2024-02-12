@@ -17,10 +17,10 @@ from gensim.models import KeyedVectors
 import pandas as pd
 import re
 from fpdf import FPDF
+import nltk
 
 views = Blueprint('views', __name__)
 
-import nltk
 nltk.download()
 nltk.download('punkt')
 nltk.download('stopwords')
