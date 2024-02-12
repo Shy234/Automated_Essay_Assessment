@@ -23,6 +23,8 @@ views = Blueprint('views', __name__)
 
 import nltk
 nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('corpus')
 
 nlp = spacy.load("en_core_web_sm")
 
