@@ -15,7 +15,7 @@
               <h1 style="font-size: 30px;">CREATE YOUR FOLDER</h1>
                 <form class="folder-create" method="POST" action="create_folder">
                     <label for="folder_name">Folder Name:</label>
-                    <input type="text" name="folder_name" required>
+                    <input type="text" id="folder_name" required>
                     <button type="submit">Create Folder</button>
                 </form>
                 <div style="box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);"class="folders-container">
@@ -61,7 +61,7 @@
         </form>
             
         <div id="relevancePopup" class="relevance">
-            <label for="relevanceWords" size="+2"><h6>Five words assessing relevance:<br>(If you select the relevance)</h6> </label>
+            <label id="relevanceWords" size="+2"><h6>Five words assessing relevance:<br>(If you select the relevance)</h6> </label>
             <input type="text" id="word1" name="word1" placeholder="Word 1">
             <input type="text" id="word2" name="word2" placeholder="Word 2">
             <input type="text" id="word3" name="word3" placeholder="Word 3">
@@ -70,7 +70,7 @@
           </div>
         
           <br/><br/>
-          <label for="essay">Upload your essay:</label>
+          <label name="essay">Upload your essay:</label>
           <input type="file" name="essay" id="uploadedfilename"e accept=".doc, .docx, .txt"><br/>
           <div align="center">
           <button type="submit" class="btn btn-primary mt-3">Assess</button>
