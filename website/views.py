@@ -374,7 +374,7 @@ def assess():
 
         try:
             if essay_file:
-                essay_text = essay_file.read().decode("utf-8", errors="")
+                essay_text = essay_file.read().decode("utf-8", errors="ignore")
                 assessment_results = assess_essay(essay_text, selected_criteria)
                 return render_template("home.html", folders=user_folders, results=assessment_results, user=current_user,
                                        question=question, student_number=student_number,
