@@ -17,16 +17,11 @@ from gensim.models import KeyedVectors
 import pandas as pd
 import re
 from fpdf import FPDF
-from nltk.corpus import brown
-brown.words()
-['The', 'Fulton', 'County', 'Grand', 'Jury', 'said', ...]
 
 views = Blueprint('views', __name__)
 
 import nltk
 nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('corpus')
 nltk.download('averaged_perceptron_tagger')
 
 nlp = spacy.load("en_core_web_sm")
