@@ -390,6 +390,8 @@ def assess():
         except Exception as e:
             print(f"Error in assess_essay: {str(e)}")
             flash('Error occurred during assessmentss.', 'error')
+            flash(f"Error in assess_essay: {str(e)}")
+
             return redirect(url_for('views.home', folders=user_folders, user=current_user,
                                     question=question, student_number=student_number,
                                     uploaded_file_name=uploaded_file_name))
