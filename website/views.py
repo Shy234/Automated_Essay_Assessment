@@ -17,7 +17,9 @@ from gensim.models import KeyedVectors
 import pandas as pd
 import re
 from fpdf import FPDF
-
+from nltk.corpus import brown
+brown.words()
+['The', 'Fulton', 'County', 'Grand', 'Jury', 'said', ...]
 
 views = Blueprint('views', __name__)
 
