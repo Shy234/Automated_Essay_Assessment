@@ -374,8 +374,6 @@ def assess():
 
         if essay_file:
             uploaded_file_name = essay_file.filename
-            flash(' uploaded_file_name = essay_file.filename')
-              
 
         try:
             if essay_file:
